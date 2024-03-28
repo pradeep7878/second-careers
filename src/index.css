@@ -1,13 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap");
+
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;  
+  /* background-color: #f3f6f9; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Button Component CSS */
+
+
+
+.btn-brand-color{
+  background-color: #f58b0e;
+  color: #f6f6f6;
+  font-weight: 500;
+}
+.btn-brand-color:hover{
+  background-color: #e38212;
+  color: #f6f6f6;
+  font-weight: 500;
+}
+.searchInput::placeholder {
+   font-size: 0.9rem !important;
+}
+
+.login {
+  min-height: 90vh;
+}
+
+
+/* Card Component CSS */
+
+
+.select-category  li a{
+  color: grey;
+  font-weight: 500;
+}
+.bg-image {
+  background-image: url("../src/assets/images/loginSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.header-nav {
+  min-height: 10vh;
+}
+.login-heading {
+  font-weight: 600;
+  text-align: center;
+}
+.signup-heading {
+  font-weight: 600;
+}
+.btn-login {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  padding: 1.25rem 1.25rem;
+  background-color: #f58b0e;
+  color: #ffffff;
+}
+.btn-login:hover {
+  background-color: #e38212;
+  color: #ffffff;
+}
+.btn-linkedin {
+  background-color: #0077b5; 
+}
+
+
+
+.btn-linkedin:hover {
+  background-color: #106d9f;
+}
+
+.login-form > .form-control {
+  background-color: #f6f6f6;
+  padding: 1.5rem 0.75rem !important;
+}
+.label-text {
+  color: lightslategray;
+}
+.login-input-group-text {
+  background-color: #f3f6f9;
+  padding: 1.5rem !important;
+}
+.brand-color {
+  color: #e38212;
+  font-weight: 900;
+}
+
+.sign-up-buttons {
+  padding: 0.6rem 0.6rem;
+  background-color: #f58b0e;
+  font-weight: 900;
+  border: #f58b0e;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.sign-up-buttons:hover {
+  background-color: #e38212;
+  color: #ffffff;
+}
+
+.visible-eye {
+  color: #a5a5a5;
+  cursor: pointer;
+}
+
+input.login-input:focus {
+  box-shadow: none;
+}
+
+.signup-link,
+.signInLink {
+  cursor: pointer;
+}
+
+.reset-side-bg-image {
+  background-image: url("../src/assets/images/resetPasswordSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+.signup-error-message{
+  font-size: 0.8rem;
+}
+.social-signup:hover {
+  cursor: pointer;
+}
+
+.forget-password-bg-image {
+  background-image: url("../src/assets/images/forgetPasswordSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+.role-selectors-bg-image {
+  background-image: url("../src/assets/images/roleSelectorSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+.professional-bg-image{
+  background-image: url("../src/assets/images/professionalSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+.form-check-label{
+  font-size: 0.75rem;
+  color: #616161;
+}
+.signup-forms input:focus{
+  box-shadow: none;
+  border: 1px solid #616161;
+}
+.signup-forms input[type="date"]::placeholder{
+  font-size: 0.1rem;
+  
+}
+/* .dashboard-background{
+  background-color: #f3f6f9;
+}
+.job-description{
+  color: #616161;
+}
+.job-card-description{
+  font-size: 0.75rem;
+  color: #616161;
+}
+.job-card-posted-time{
+  font-size: 0.70rem;
+}
+.fs-7{
+  font-size: 0.8rem;
+}
+.btn-brand-color{
+  background-color: #f58b0e;
+  color: #f6f6f6;
+  font-weight: 500;
+}
+.btn-brand-color:hover{
+  background-color: #e38212;
+  color: #f6f6f6;
+  font-weight: 500;
+}
+.searchInput::placeholder {
+   font-size: 0.9rem !important;
+}
+.login {
+  min-height: 90vh;
+}
+.select-category  li a{
+  color: grey;
+  font-weight: 500;
+}
+.bg-image {
+  background-image: url("images/loginSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.forget-password-bg-image {
+  background-image: url("images/forgetPasswordSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+.reset-side-bg-image {
+  background-image: url("images/resetPasswordSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+.header-nav {
+  min-height: 10vh;
+}
+.login-heading {
+  font-weight: 600;
+}
+.btn-login {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  padding: 1.25rem 1.25rem;
+  background-color: #f58b0e;
+  color: #ffffff;
+}
+.btn-login:hover {
+  background-color: #e38212;
+  color: #ffffff;
+}
+.btn-linkedin {
+  background-color: #0077b5; 
+}
+
+
+
+.btn-linkedin:hover {
+  background-color: #106d9f;
+}
+
+.login-form > .form-control {
+  background-color: #f6f6f6;
+  padding: 1.5rem 0.75rem !important;
+}
+.label-text {
+  color: lightslategray;
+}
+.login-input-group-text {
+  background-color: #f3f6f9;
+  padding: 1.5rem !important;
+}
+.brand-color {
+  color: #e38212;
+  font-weight: 900;
+}
+
+.sign-up-buttons {
+  background-color: #f58b0e;
+  font-weight: 900;
+  border: #f58b0e;
+}
+
+.sign-up-buttons:hover {
+  background-color: #e38212;
+}
+
+.role-selectors-bg-image {
+  background-image: url("images/roleSelectionSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.professional-bg-image{
+  background-image: url("images/professionalSideImage.png");
+  background-size: cover;
+  background-position: center;
+}
+.role-selector-cards:hover {
+  background-color: #f9e1d1;
+  cursor: pointer;
+}
+.rightArrowIcon {
+  color: #e38212;
+}
+.button-bold-text {
+  font-weight: 700;
+}
+.btn-brand-background-color {
+  background-color: #f58b0e;
+}
+
+.btn-brand-background-color:hover {
+  background-color: #e38212;
+  color: #ffffff;
+}
+
+.visible-eye {
+  color: #a5a5a5;
+  cursor: pointer;
+}
+
+input.login-input:focus {
+  box-shadow: none;
+}
+
+.signup-link,
+.signInLink {
+  cursor: pointer;
+}
+
+.social-signup:hover {
+  cursor: pointer;
+}
+.role-selection-description, .profile-descriptions {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #616161;
+}
+.profile-header{
+  font-weight: 600;
+}
+.form-check-label{
+  font-size: 0.75rem;
+  color: #616161;
+}
+input[type=date]:valid::-webkit-datetime-edit {
+  color: #616161 !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: yellow;
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+.profile-side-headers{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.profile-inner-headers{
+  font-size: 1.1rem;
+  font-weight: 500;
+} */
+
+
+
+
+
+
+
+
+/* Professional Signup========================================================================= */
+
+/* input[type="checkbox"]:not(:checked) {
+  border: 1px solid #FF0000; 
+} */
+
+/* .iti__globe { background-image: url("path/to/globe.png"); }
+.iti__flag { background-image: url("path/to/flags.png"); }
+
+@media (min-resolution: 2x) {
+  .iti__globe { background-image: url("path/to/globe@2x.png"); }
+  .iti__flag { background-image: url("path/to/flags@2x.png"); }
+} */
+/* 
+.professional-signup-error-message{
+  display: none;
+} */
+/* input:invalid[focused="false"] ~ span{
+  display: block ;
+} */
+.professional-signup-error-message{
+  display: none ;
+}
+
+input:invalid[focused="true"] ~ .professional-signup-error-message{
+  display: block ;
+}
+/* .mobileComp{
+  background-color: red;
+  width: 100% !important;
+} */
+
+.react-tel-input .form-control{
+  /* background-color: red !important; */
+  width: 100% !important;
+}
+/* .date-picker-component{
+  background-color: red;
+  width: 100% !important;
+  display: inline-block !important;
+} */
+
+
+.react-datepicker__input-container {
+  width: inherit;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
 }
